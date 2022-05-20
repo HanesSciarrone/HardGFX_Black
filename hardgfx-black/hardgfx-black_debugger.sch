@@ -1,0 +1,127 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_ARM_JTAG_SWD_10 J?
+U 1 1 62990394
+P 4350 3750
+F 0 "J?" H 3907 3796 50  0000 R CNN
+F 1 "Conn_ARM_JTAG_SWD_10" H 3907 3705 50  0000 R CNN
+F 2 "" H 4350 3750 50  0001 C CNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 4000 2500 50  0001 C CNN
+	1    4350 3750
+	1    0    0    -1  
+$EndComp
+Text HLabel 6750 3450 2    50   Output ~ 0
+RESET
+Text HLabel 6750 3650 2    50   Output ~ 0
+JTCK-SWDCLK
+Text HLabel 6750 3750 2    50   BiDi ~ 0
+JTMS-SWDIO
+Text HLabel 6750 3850 2    50   Input ~ 0
+JTDO-SWO
+Text HLabel 6750 3950 2    50   Output ~ 0
+JTDI
+Text HLabel 6750 4100 2    50   Output ~ 0
+JTRST
+$Comp
+L Device:R R?
+U 1 1 62992004
+P 6200 3150
+F 0 "R?" V 6150 2900 50  0000 C CNN
+F 1 "22" V 6150 3350 50  0000 C CNN
+F 2 "" V 6130 3150 50  0001 C CNN
+F 3 "~" H 6200 3150 50  0001 C CNN
+	1    6200 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 62994157
+P 6200 3600
+F 0 "R?" V 6150 3350 50  0000 C CNN
+F 1 "22" V 6150 3800 50  0000 C CNN
+F 2 "" V 6130 3600 50  0001 C CNN
+F 3 "~" H 6200 3600 50  0001 C CNN
+	1    6200 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 629943E5
+P 6200 3750
+F 0 "R?" V 6150 3500 50  0000 C CNN
+F 1 "22" V 6150 3950 50  0000 C CNN
+F 2 "" V 6130 3750 50  0001 C CNN
+F 3 "~" H 6200 3750 50  0001 C CNN
+	1    6200 3750
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 62994671
+P 6200 3900
+F 0 "R?" V 6150 3650 50  0000 C CNN
+F 1 "22" V 6150 4100 50  0000 C CNN
+F 2 "" V 6130 3900 50  0001 C CNN
+F 3 "~" H 6200 3900 50  0001 C CNN
+	1    6200 3900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 62994829
+P 6200 4050
+F 0 "R?" V 6150 3800 50  0000 C CNN
+F 1 "22" V 6150 4250 50  0000 C CNN
+F 2 "" V 6130 4050 50  0001 C CNN
+F 3 "~" H 6200 4050 50  0001 C CNN
+	1    6200 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 62994A0E
+P 6200 4200
+F 0 "R?" V 6150 3950 50  0000 C CNN
+F 1 "22" V 6150 4400 50  0000 C CNN
+F 2 "" V 6130 4200 50  0001 C CNN
+F 3 "~" H 6200 4200 50  0001 C CNN
+	1    6200 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L ESDALC6V1W5:ESDALC6V1W5 CR?
+U 1 1 6299C458
+P 4100 5350
+F 0 "CR?" H 5335 5703 60  0000 L CNN
+F 1 "ESDALC6V1W5" H 5335 5597 60  0000 L CNN
+F 2 "SOT323-5L_STM" V 4400 5650 60  0001 C CNN
+F 3 "" H 4100 5350 60  0000 C CNN
+	1    4100 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L ESDALC6V1W5:ESDALC6V1W5 CR?
+U 1 1 6299D989
+P 5650 5350
+F 0 "CR?" H 6885 5703 60  0000 L CNN
+F 1 "ESDALC6V1W5" H 6885 5597 60  0000 L CNN
+F 2 "SOT323-5L_STM" V 5950 5650 60  0001 C CNN
+F 3 "" H 5650 5350 60  0000 C CNN
+	1    5650 5350
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

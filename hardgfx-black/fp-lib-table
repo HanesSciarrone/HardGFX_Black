@@ -1,0 +1,13 @@
+(fp_lib_table
+  (lib (name STM32H745BIT3)(type KiCad)(uri ${KIPRJMOD}/Library/STMicroelectronics/STM32H745BIT3.pretty)(options "")(descr ""))
+  (lib (name CAS-D20TA)(type KiCad)(uri ${KIPRJMOD}/Library/Switch/CAS-D20TA.pretty)(options "")(descr ""))
+  (lib (name ESDA7P60-1U1M)(type KiCad)(uri ${KIPRJMOD}/Library/STMicroelectronics/ESDA7P60-1U1M.pretty)(options "")(descr ""))
+  (lib (name ST1L05APU33R)(type KiCad)(uri ${KIPRJMOD}/Library/STMicroelectronics/ST1L05APU33R.pretty)(options "")(descr ""))
+  (lib (name Button_switch_wuerth_elektronik_430481025816)(type KiCad)(uri ${KIPRJMOD}/Library/Switch/Button_switch_wuerth_elektronik_430481025816.pretty)(options "")(descr ""))
+  (lib (name LQM2MPN2R2NG0L)(type KiCad)(uri ${KIPRJMOD}/Library/Inductors/LQM2MPN2R2NG0L.pretty)(options "")(descr ""))
+  (lib (name 595D475X9016A2T)(type KiCad)(uri ${KIPRJMOD}/Library/Capacitors/595D475X9016A2T.pretty)(options "")(descr ""))
+  (lib (name 595D105X9035A2T)(type KiCad)(uri ${KIPRJMOD}/Library/Capacitors/595D105X9035A2T.pretty)(options "")(descr ""))
+  (lib (name IS42S32800J-6TLI)(type KiCad)(uri ${KIPRJMOD}/Library/Memories/IS42S32800J-6TLI.pretty)(options "")(descr ""))
+  (lib (name MT25QL512ABB8ESF-0AAT)(type KiCad)(uri ${KIPRJMOD}/Library/Memories/MT25QL512ABB8ESF-0AAT.pretty)(options "")(descr ""))
+  (lib (name footprints)(type KiCad)(uri "/home/hanes/Downloads/ul_MT25QL512ABB8ESF-0AAT(1)/KiCAD/2022-03-19_03-31-49/footprints.pretty")(options "")(descr ""))
+)
