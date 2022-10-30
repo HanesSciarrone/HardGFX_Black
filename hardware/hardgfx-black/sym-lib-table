@@ -1,0 +1,11 @@
+(sym_lib_table
+  (lib (name "STM32H745BITx")(type "KiCad")(uri "${KIPRJMOD}/Library/STMicroelectronics/STM32H745BITx.kicad_sym")(options "")(descr ""))
+  (lib (name "CAS-D20TA")(type "KiCad")(uri "${KIPRJMOD}/Library/Switch/CAS-D20TA.kicad_sym")(options "")(descr ""))
+  (lib (name "ESDA7P60-1U1M")(type "KiCad")(uri "${KIPRJMOD}/Library/STMicroelectronics/ESDA7P60-1U1M.kicad_sym")(options "")(descr ""))
+  (lib (name "ST1L05APU33R")(type "KiCad")(uri "${KIPRJMOD}/Library/STMicroelectronics/ST1L05APU33R.kicad_sym")(options "")(descr ""))
+  (lib (name "MIC4575-5.0WU")(type "KiCad")(uri "${KIPRJMOD}/Library/Switch-converter/MIC4575-5.0WU.kicad_sym")(options "")(descr ""))
+  (lib (name "MT25QL512ABB")(type "KiCad")(uri "${KIPRJMOD}/Library/Memories/MT25QL512ABB.kicad_sym")(options "")(descr ""))
+  (lib (name "IS42S32800J-6TLI")(type "KiCad")(uri "${KIPRJMOD}/Library/Memories/IS42S32800J-6TLI.kicad_sym")(options "")(descr ""))
+  (lib (name "ESDALC6V1W5")(type "KiCad")(uri "${KIPRJMOD}/Library/STMicroelectronics/ESDALC6V1W5.kicad_sym")(options "")(descr ""))
+  (lib (name "STMPS2151")(type "KiCad")(uri "${KIPRJMOD}/Library/STMicroelectronics/STMPS2151.kicad_sym")(options "")(descr ""))
+)
