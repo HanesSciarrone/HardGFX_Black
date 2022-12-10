@@ -309,6 +309,7 @@
     (uuid b9397746-db75-444d-a775-d15db434a34a)
   )
 
+  (no_connect (at 204.47 68.58) (uuid 02c9407d-2ea3-4b73-b68e-f81fdd2ad668))
   (no_connect (at 74.93 68.58) (uuid e866e034-180a-45c3-a630-2db7b2a2802d))
 
   (wire (pts (xy 67.31 64.77) (xy 67.31 72.39))
