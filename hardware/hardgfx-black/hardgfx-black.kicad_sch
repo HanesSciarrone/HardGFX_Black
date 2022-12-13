@@ -7552,7 +7552,7 @@
     (path "/193ab04f-7aba-462a-8e26-c2ef6faab44f/1eca5f29-ed50-443c-9984-7cd94f6fe713"
       (reference "J11") (unit 1) (value "Conn_01x02") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical")
     )
-    (path "/7e86bd46-cd49-4013-a820-6e307d2e7505/e75f1307-5d13-498e-afa6-5e430cd6646b"
+    (path "/7e86bd46-cd49-4013-a820-6e307d2e7505/3ecc717f-c1b1-483b-9f3e-968b87740090"
       (reference "J12") (unit 1) (value "FH12-50S-0.5SH") (footprint "Connector_FFC-FPC:TE_5-1734839-0_1x50-1MP_P0.5mm_Horizontal")
     )
     (path "/7e86bd46-cd49-4013-a820-6e307d2e7505/ad9d3683-0712-4806-8058-3ee7a7266e1d"
@@ -8024,10 +8024,10 @@
       (reference "U4") (unit 1) (value "LD1117S18TR") (footprint "Package_TO_SOT_SMD:SOT-223-3_TabPin2")
     )
     (path "/7a148263-54e9-4e68-bb7a-08a72cb83e27/47c6bd15-1636-4478-aae1-bf3782dadc9c"
-      (reference "U5") (unit 1) (value "MT25QL512ABB8ESF-0AAT") (footprint "MT25QL512ABB8ESF-0AAT:MT25QL512ABB8ESF-0AAT")
+      (reference "U5") (unit 1) (value "MT25QL512ABB8ESF-0AAT") (footprint "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm")
     )
     (path "/7a148263-54e9-4e68-bb7a-08a72cb83e27/3daf4069-e78f-46ab-b6d9-15d4aa49d67d"
-      (reference "U6") (unit 1) (value "MT25QL512ABB8ESF-0AAT") (footprint "MT25QL512ABB8ESF-0AAT:MT25QL512ABB8ESF-0AAT")
+      (reference "U6") (unit 1) (value "MT25QL512ABB8ESF-0AAT") (footprint "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm")
     )
     (path "/5f85200b-632c-45c5-ad1a-4fe4f0f0933e/e25edae9-a2fe-42ee-9f38-1f0647a1cbca"
       (reference "U7") (unit 1) (value "IS42S32800J-6TLI") (footprint "IS42S32800J-6TLI:SOP50P1176X120-86N")
