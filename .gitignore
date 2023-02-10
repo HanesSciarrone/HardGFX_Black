@@ -24,3 +24,7 @@ fp-info-cache
 # Exported BOM files
 *.xml
 *.csv
+
+# ZIP file of backup
+hardware/hardgfx-black/*.zip
+
