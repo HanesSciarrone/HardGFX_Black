@@ -27,7 +27,7 @@
 #define LCD_TIMx_CLK_DISABLE()                          __HAL_RCC_TIM8_CLK_DISABLE()
 #define LCD_TIMx_CHANNEL                                TIM_CHANNEL_3
 #define LCD_TIMx_CHANNEL_AF                             GPIO_AF3_TIM8
-#define LCD_TIMX_PERIOD_VALUE                           60000U  // Period Value
+#define LCD_TIMX_PERIOD_VALUE                           50000U  // Period Value
 #define LCD_TIMX_PRESCALER_VALUE                        4U      // Prescaler Value
 
 
@@ -64,6 +64,9 @@ typedef struct
     uint32_t endX;
     uint32_t startY;
     uint32_t endY;
+    uint32_t imageWidth;
+    uint32_t imageHeight;
+    uint32_t alpha;
     uint32_t pixelFormat;
     uint32_t startAddress;
 }HardGFX_LDC_LayerInit_t;

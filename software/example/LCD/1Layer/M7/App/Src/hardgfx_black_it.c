@@ -80,5 +80,16 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
-  HAL_IncTick();
+    HAL_IncTick();
 }
+
+/******************************************************************************/
+/* STM32H7xx Peripheral Interrupt Handlers                                    */
+/* Add here the Interrupt Handlers for the used peripherals.                  */
+/* For the available peripheral interrupt handler names,                      */
+/* please refer to the startup file (startup_stm32h7xx.s).                    */
+/******************************************************************************/
+
+/**
+  * @brief This function handles MDMA global interrupt.
+  */

@@ -81,6 +81,9 @@ int32_t HardGFXLcdInit(const lcdOrientation orientation, const HardGFX_Pixel_For
         layerInit.startY = 0;
         layerInit.endY = heigth;
         layerInit.pixelFormat = pixelFormat;
+        layerInit.alpha = 255;
+        layerInit.imageWidth = width;
+        layerInit.imageHeight = heigth;
         layerInit.startAddress = HARDGFX_LCD_LAYER_0_ADDRESS;
 
         retVal = HardGFX_LCD_Layer_Init(&lcdHandler, &layerInit, 1);

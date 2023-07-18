@@ -7,6 +7,7 @@ extern "C" {
 
 #include "stm32h7xx_hal.h"
 
+#define HARDGFX_LCD_INTERRUPT_ENABLE                0
 #define HARDGFX_LCD_LAYER_0_ADDRESS                 0xD0000000U
 #define HARDGFX_LCD_LAYER_1_ADDRESS                 0xD0200000U
 
@@ -42,6 +43,7 @@ extern "C" {
 
 
 /* IRQ priorities */
+#define HARDGFX_LCD_IT_PRIORITY                     15U
 #define HARDGFX_TOUCHSCREEN_IT_PRIORITY             15U
 /**
   * @}

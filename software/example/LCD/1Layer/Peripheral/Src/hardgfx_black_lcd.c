@@ -129,6 +129,12 @@ int32_t HardGFX_LDC_GPIO_Init(HardGFX_LCD_HandlerTypeDef* lcdHandler)
         __HAL_RCC_LTDC_FORCE_RESET();
         __HAL_RCC_LTDC_RELEASE_RESET();
 
+#if HARDGFX_LCD_INTERRUPT_ENABLE == 1
+        /* LTDC interrupt Init */
+        HAL_NVIC_SetPriority(LTDC_IRQn, HARDGFX_LCD_IT_PRIORITY, 0);
+        HAL_NVIC_EnableIRQ(LTDC_IRQn);
+#endif
+
         retVal = HARDGFX_NONE_ERROR;
     }
 
@@ -161,6 +167,10 @@ void HardGFX_LDC_GPIO_DeInit(HardGFX_LCD_HandlerTypeDef* lcdHandler)
         HAL_GPIO_DeInit(LCD_BL_GPIO_PORT, LCD_BL_PIN);
 
         HAL_GPIO_DeInit(LCD_RST_GPIO_PORT, LCD_RST_PIN);
+
+#if HARDGFX_LCD_INTERRUPT_ENABLE == 1
+        HAL_NVIC_DisableIRQ(LTDC_IRQn);
+#endif
     }
 }
 
@@ -257,13 +267,13 @@ __weak int32_t HardGFX_LCD_Layer_Init(HardGFX_LCD_HandlerTypeDef* lcdHandler, Ha
                     layerConfig[index].WindowY0 = layers[index].startY;
                     layerConfig[index].WindowY1 = layers[index].endY;
                     layerConfig[index].PixelFormat = layers[index].pixelFormat;
-                    layerConfig[index].Alpha = 255;
+                    layerConfig[index].Alpha = layers[index].alpha;
                     layerConfig[index].Alpha0 = 0;
                     layerConfig[index].BlendingFactor1 = LTDC_BLENDING_FACTOR1_PAxCA;
                     layerConfig[index].BlendingFactor2 = LTDC_BLENDING_FACTOR2_PAxCA;
                     layerConfig[index].FBStartAdress = layers[index].startAddress;
-                    layerConfig[index].ImageWidth = layers[index].endX - layers[index].startX;
-                    layerConfig[index].ImageHeight = layers[index].endY - layers[index].startY;
+                    layerConfig[index].ImageWidth = layers[index].imageWidth;
+                    layerConfig[index].ImageHeight = layers[index].imageHeight;
                     layerConfig[index].Backcolor.Blue = 0;
                     layerConfig[index].Backcolor.Green = 0;
                     layerConfig[index].Backcolor.Red = 0;

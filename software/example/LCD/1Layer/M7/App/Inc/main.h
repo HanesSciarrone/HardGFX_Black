@@ -7,10 +7,10 @@ extern "C" {
 
 #include "stm32h7xx_hal.h"
 
-void ErrorHandler(void);
+void Error_Handler(void);
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif
+#endif /* __MAIN_H */
