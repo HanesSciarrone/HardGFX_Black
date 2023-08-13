@@ -53,7 +53,25 @@ void HardGFX_SystemClock_Configure(void)
         Error_Handler();
     }
 
-    __HAL_RCC_SYSCFG_CLK_ENABLE();
+    /*
+     * Note : The activation of the I/O Compensation Cell is recommended with communication  interfaces
+     *       (GPIO, SPI, FMC, QSPI ...)  when  operating at  high frequencies(please refer to product datasheet)
+     *
+     *       The I/O Compensation Cell activation  procedure requires :
+     *     - The activation of the CSI clock.
+     *     - The activation of the SYSCFG clock.
+     *     - Enabling the I/O Compensation Cell : setting bit[0] of register SYSCFG_CCCSR.
+    */
+
+     // Activate CSI clock. It is mandatory for I/O Compensation Cell
+     __HAL_RCC_CSI_ENABLE() ;
+
+     // Enable SYSCFG clock. It is mandatory for I/O Compensation Cell
+     __HAL_RCC_SYSCFG_CLK_ENABLE() ;
+
+     // Enables the I/O Compensation Cell
+     HAL_EnableCompensationCell();
+
 }
 
 void HardGFX_RCC_GPIO_Init(void)
