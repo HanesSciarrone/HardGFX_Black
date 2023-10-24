@@ -1,0 +1,3 @@
+[submodule "software/example/software/example/LVGL_Port/CM7/lvgl"]
+	path = software/example/software/example/LVGL_Port/CM7/lvgl
+	url = https://github.com/lvgl/lvgl.git
