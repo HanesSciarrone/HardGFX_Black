@@ -71,13 +71,13 @@ int32_t HardGFX_SDRAM_Init(void)
     hsdram.Init.ReadPipeDelay = FMC_SDRAM_RPIPE_DELAY_0;
 
     /* SDRAM Timing */
-    sdramTiming.LoadToActiveDelay = 2;
-    sdramTiming.ExitSelfRefreshDelay = 7;
-    sdramTiming.SelfRefreshTime = 5;
-    sdramTiming.RowCycleDelay = 7;
-    sdramTiming.WriteRecoveryTime = 3;
-    sdramTiming.RPDelay = 2;
-    sdramTiming.RCDDelay = 2;
+    sdramTiming.LoadToActiveDelay       = SDRAM_LOAD_TO_ACTIVE_DELAY;
+    sdramTiming.ExitSelfRefreshDelay    = SDRAM_EXIT_SELF_REFRESH_DELAY;
+    sdramTiming.SelfRefreshTime         = SDRAM_SELF_REFRESH_TIME;
+    sdramTiming.RowCycleDelay           = SDRAM_ROW_CYCLE_DELAY;
+    sdramTiming.WriteRecoveryTime       = SDRAM_WRITE_RECOVERY_TIME;
+    sdramTiming.RPDelay                 = SDRAM_RP_DELAY;
+    sdramTiming.RCDDelay                = SDRAM_RCD_DELAY;
 
     if (HAL_SDRAM_Init(&hsdram, &sdramTiming) != HAL_OK)
     {

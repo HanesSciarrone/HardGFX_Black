@@ -41,6 +41,16 @@ extern "C" {
 #define  DISPLAY_VBP                                ((uint16_t)2)   /* Vertical back porch        */
 #define  DISPLAY_VFP                                ((uint16_t)2)   /* Vertical front porch       */
 
+/**
+ * @brief SDRAM Timing
+ */
+#define SDRAM_LOAD_TO_ACTIVE_DELAY                  2U
+#define SDRAM_EXIT_SELF_REFRESH_DELAY               7U
+#define SDRAM_SELF_REFRESH_TIME                     5U
+#define SDRAM_ROW_CYCLE_DELAY                       7U
+#define SDRAM_WRITE_RECOVERY_TIME                   3U
+#define SDRAM_RP_DELAY                              2U
+#define SDRAM_RCD_DELAY                             2U
 
 /* IRQ priorities */
 #define HARDGFX_LCD_IT_PRIORITY                     15U
