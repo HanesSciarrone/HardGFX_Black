@@ -95,6 +95,7 @@ int main(void)
     layerInit.startY        = 0;
     layerInit.endY          = DISPLAY_HEIGHT;
     layerInit.pixelFormat   = HARDGFX_LCD_PIXEL_FORMAT_RGB565;
+    layerInit.alpha         = 255;
     layerInit.imageWidth    = DISPLAY_WIDTH;
     layerInit.imageHeight   = DISPLAY_HEIGHT;
     layerInit.startAddress  = (uint32_t)&images;

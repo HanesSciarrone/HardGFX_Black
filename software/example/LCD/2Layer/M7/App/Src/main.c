@@ -106,9 +106,9 @@ int main(void)
     layerInit[0].startY         = 0;
     layerInit[0].endY           = 240;
     layerInit[0].pixelFormat    = HARDGFX_LCD_PIXEL_FORMAT_L8;
+    layerInit[0].alpha          = 255;
     layerInit[0].imageWidth     = 320;
     layerInit[0].imageHeight    = 240;
-    layerInit[0].alpha          = 255;
     layerInit[0].startAddress   = (uint32_t)&images2;
 
     layerInit[1].startX         = 160;
@@ -116,9 +116,9 @@ int main(void)
     layerInit[1].startY         = 32;
     layerInit[1].endY           = 272;
     layerInit[1].pixelFormat    = LTDC_PIXEL_FORMAT_RGB565;
-    layerInit[0].alpha          = 200;
-    layerInit[0].imageWidth     = 320;
-    layerInit[0].imageHeight    = 240;
+    layerInit[1].alpha          = 200;
+    layerInit[1].imageWidth     = 320;
+    layerInit[1].imageHeight    = 240;
     layerInit[1].startAddress   = (uint32_t)&images1;
 
     retVal = HardGFX_LCD_Layer_Init(&lcdHandler, layerInit, 2);

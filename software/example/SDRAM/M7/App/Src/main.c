@@ -11,29 +11,30 @@
 /* ----------------------------------------------------------------- */
 
 /* ------------------------- Private macro ------------------------- */
-#define BUFFER_SIZE            ((uint32_t)0x200)
+#define BUFFER_SIZE            ((uint32_t)0x00A)
 #define BUFFER_SIZE_IN_BYTES   BUFFER_SIZE*4
 #define WRITE_READ_ADDR        ((uint32_t)0x00000000)
 /* ----------------------------------------------------------------- */
 
 /* ----------------------- Private variables ----------------------- */
-ALIGN_32BYTES(uint32_t txBuffer[BUFFER_SIZE]);
-ALIGN_32BYTES(uint32_t rxBuffer[BUFFER_SIZE]);
+
 /* ----------------------------------------------------------------- */
 
 /* ------------------ Private function prototypes ------------------ */
 static void MPU_Config(void);
 static void HardGFX_CPU_Cache_Enable(void);
-static void HardGFX_Fill_Buffer(uint32_t *buffer, uint32_t lenght, uint32_t offset);
+static void HardGFX_Fill_Buffer(uint32_t* buffer, uint32_t lenght, uint32_t offset);
 static uint8_t HardGFX_Compare_Buffer(uint32_t* buffer1, uint32_t* buffer2, uint16_t length);
-static uint32_t HardGFX_SDRAM_Demo(void);
-static uint32_t HardGFX_SDRAM_DMA_Demo(void);
+static uint32_t HardGFX_SDRAM_Demo(uint32_t* txBuffer, uint32_t* rxBuffer);
+static uint32_t HardGFX_SDRAM_DMA_Demo(uint32_t* txBuffer, uint32_t* rxBuffer);
 /* ----------------------------------------------------------------- */
 
 int main(void)
 {
     uint32_t errno = HAL_OK;
     int32_t timeout = 0xFFFF;
+    ALIGN_32BYTES(uint32_t txBuffer[BUFFER_SIZE]);
+    ALIGN_32BYTES(uint32_t rxBuffer[BUFFER_SIZE]);
 
     // MPU Configuration
     MPU_Config();
@@ -81,8 +82,11 @@ int main(void)
         Error_Handler();
     }
 
-    /* Testing write/read SDRAM with and without DMA */
-    errno = HardGFX_SDRAM_Demo();
+    memset(txBuffer, 0, sizeof(txBuffer));
+    memset(rxBuffer, 0, sizeof(rxBuffer));
+
+    /* Testing write/read SDRAM without DMA */
+    errno = HardGFX_SDRAM_Demo(txBuffer, rxBuffer);
 
     if (errno != HAL_OK)
     {
@@ -92,7 +96,8 @@ int main(void)
     memset(txBuffer, 0, sizeof(txBuffer));
     memset(rxBuffer, 0, sizeof(rxBuffer));
 
-    errno = HardGFX_SDRAM_DMA_Demo();
+    /* Testing write/read SDRAM with DMA */
+    errno = HardGFX_SDRAM_DMA_Demo(txBuffer, rxBuffer);
 
     if (errno != HAL_OK)
     {
@@ -158,7 +163,7 @@ static uint8_t HardGFX_Compare_Buffer(uint32_t* buffer1, uint32_t* buffer2, uint
 }
 
 
-static uint32_t HardGFX_SDRAM_Demo(void)
+static uint32_t HardGFX_SDRAM_Demo(uint32_t* txBuffer, uint32_t* rxBuffer)
 {
     HAL_StatusTypeDef errno = HAL_OK;
 
@@ -180,7 +185,7 @@ static uint32_t HardGFX_SDRAM_Demo(void)
     return HardGFX_Compare_Buffer(txBuffer, rxBuffer, BUFFER_SIZE);
 }
 
-static uint32_t HardGFX_SDRAM_DMA_Demo(void)
+static uint32_t HardGFX_SDRAM_DMA_Demo(uint32_t* txBuffer, uint32_t* rxBuffer)
 {
     HAL_StatusTypeDef errno = HAL_OK;
 
